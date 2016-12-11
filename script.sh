@@ -8,12 +8,12 @@ echo 2-Reconfigurer le sources.list avec la configuration initiale
 read -p 'veuillez entrer votre choix : ' choix
 if [ $choix = 1 ]
 then 
-                    cd /etc/apt && sudo mv sources.list{,original} && sudo wget http://mirror/sources.list.xenial/sources.list
+                    cd /etc/apt && sudo mv sources.list sources.list.original && sudo wget http://mirror/sources.list.xenial/sources.list
 
 
                     elif [ $choix=2 ] 
 then
-cd /etc/apt && sudo mv sources.list{original,}
+cd /etc/apt && sudo mv sources.list.original sources.list
          else echo veuillez entrer un numero valide 
          fi
 
