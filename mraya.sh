@@ -1,6 +1,5 @@
-#!bin/bash
+#!/bin/bash
 #Ce script a été crée par KM Younes afin de pouvoir modifier le fichier sources.list au club OMC
-#Email: kmyounes@protonmail.com
 echo Ce script va changer votre fichier de configuration de sources pour apt
 echo 1-Configurer le sources.list avec le mirroir du club
 echo 2-Reconfigurer le sources.list avec la configuration initiale
