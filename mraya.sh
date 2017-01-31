@@ -7,10 +7,15 @@ echo 2-Reconfigurer le sources.list avec la configuration initiale
 read -p 'veuillez entrer votre choix : ' choix
 if [ $choix = 1 ]
 then 
-                    cd /etc/apt && sudo mv sources.list sources.list.original && sudo wget http://mirror/sources.list.xenial/sources.list
-                    sudo apt update
+    cd /etc/apt 
+    if [ ! -e sources.list.original ]; then
+        sudo mv sources.list sources.list.original && sudo wget http://mirror/sources.list.xenial/sources.list
+    else 
+        sudo rm sources.list ; sudo wget http://mirror/sources.list.xenial/sources.list
+    fi
+    sudo apt update
 
-                    elif [ $choix=2 ] 
+elif [ $choix=2 ] 
 then
 cd /etc/apt && sudo mv sources.list.original sources.list
             sudo apt update
